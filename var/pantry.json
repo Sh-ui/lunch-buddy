@@ -73,6 +73,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "salad", "wrap", "pita"],
+      "role": ["main"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -86,6 +92,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["tuna"],
+      "serve": ["cold", "room"],
+      "forms": ["salad", "wrap", "pita", "toast", "bowl"],
+      "role": ["main"],
+      "flavors": ["umami"],
+      "texture": ["soft"],
+      "constraints": ["needs_binder"],
       "is_pantry": false
     },
     {
@@ -99,6 +111,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "salad"],
+      "role": ["main"],
+      "flavors": ["umami"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -112,6 +130,12 @@
       "allowed_in": ["meal"],
       "storage": "fridge",
       "aliases": ["raw_eggs"],
+      "serve": ["hot"],
+      "forms": ["bowl", "wrap"],
+      "role": ["main", "binder"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -125,6 +149,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["boiled_eggs"],
+      "serve": ["cold", "room"],
+      "forms": ["salad", "snack"],
+      "role": ["main", "topping"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": ["no_microwave"],
       "is_pantry": false
     },
     {
@@ -138,6 +168,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["cold"],
+      "forms": ["bowl", "salad"],
+      "role": ["binder", "base"],
+      "flavors": ["creamy"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -151,6 +187,12 @@
       "allowed_in": ["meal"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot"],
+      "forms": ["bowl"],
+      "role": ["main"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -164,6 +206,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["turkey_slices"],
+      "serve": ["cold"],
+      "forms": ["wrap", "pita", "salad"],
+      "role": ["main"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -177,6 +225,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["cold"],
+      "forms": ["bowl", "toast"],
+      "role": ["base", "binder"],
+      "flavors": ["creamy"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -190,6 +244,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "freezer",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "salad"],
+      "role": ["main"],
+      "flavors": ["umami"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -203,6 +263,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "soup"],
+      "role": ["base"],
+      "flavors": ["umami"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -216,6 +282,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["toast", "snack", "wrap"],
+      "role": ["binder", "topping"],
+      "flavors": ["nutty", "sweet"],
+      "texture": ["spreadable"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -229,6 +301,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["hard_cheese_cubes"],
+      "serve": ["cold", "room"],
+      "forms": ["snack", "salad"],
+      "role": ["topping", "main"],
+      "flavors": ["umami", "creamy"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
 
@@ -243,6 +321,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -256,6 +340,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["tortillas"],
+      "serve": ["room", "hot"],
+      "forms": ["wrap"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -269,6 +359,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": ["quinoa"],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -282,6 +378,12 @@
       "allowed_in": ["quick_eat", "grab_and_go", "meal"],
       "storage": "pantry",
       "aliases": ["pita"],
+      "serve": ["room", "hot"],
+      "forms": ["pita"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -295,6 +397,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["whole_wheat_bread"],
+      "serve": ["room"],
+      "forms": ["toast"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -308,6 +416,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["crackers"],
+      "serve": ["room"],
+      "forms": ["snack"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["crunchy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -321,6 +435,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "salad"],
+      "role": ["base"],
+      "flavors": ["neutral", "sesame"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
 
@@ -335,6 +455,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["spinach_baby"],
+      "serve": ["hot", "cold"],
+      "forms": ["salad", "bowl", "wrap"],
+      "role": ["filler", "topping"],
+      "flavors": ["herby"],
+      "texture": ["leafy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -348,6 +474,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["salad", "bowl"],
+      "role": ["filler", "topping"],
+      "flavors": ["herby"],
+      "texture": ["leafy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -361,6 +493,12 @@
       "allowed_in": ["quick_eat", "grab_and_go", "meal"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["cold"],
+      "forms": ["salad", "wrap", "snack"],
+      "role": ["topping", "filler"],
+      "flavors": ["neutral"],
+      "texture": ["crunchy"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -374,6 +512,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["grape_tomatoes"],
+      "serve": ["cold", "hot"],
+      "forms": ["salad", "bowl", "toast"],
+      "role": ["topping"],
+      "flavors": ["acidic"],
+      "texture": ["juicy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -387,6 +531,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["salad", "toast", "wrap", "bowl"],
+      "role": ["binder", "topping"],
+      "flavors": ["creamy"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -400,6 +550,12 @@
       "allowed_in": ["meal"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot"],
+      "forms": ["bowl"],
+      "role": ["filler", "main"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -413,6 +569,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["peppers"],
+      "serve": ["hot", "cold"],
+      "forms": ["salad", "wrap", "bowl", "snack"],
+      "role": ["filler", "topping"],
+      "flavors": ["sweet"],
+      "texture": ["crunchy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -426,6 +588,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["romaine"],
+      "serve": ["cold"],
+      "forms": ["salad", "wrap"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["leafy"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -439,6 +607,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["cold"],
+      "forms": ["snack", "bowl"],
+      "role": ["topping"],
+      "flavors": ["sweet"],
+      "texture": ["juicy"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -452,6 +626,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["carrot_sticks"],
+      "serve": ["cold", "hot"],
+      "forms": ["snack", "salad", "bowl"],
+      "role": ["topping", "filler"],
+      "flavors": ["sweet"],
+      "texture": ["crunchy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -465,6 +645,12 @@
       "allowed_in": ["grab_and_go", "quick_eat"],
       "storage": "counter",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["snack", "toast"],
+      "role": ["topping"],
+      "flavors": ["sweet"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -478,6 +664,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["bowl", "salad", "snack"],
+      "role": ["main", "filler"],
+      "flavors": ["neutral"],
+      "texture": ["firm"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -491,6 +683,12 @@
       "allowed_in": ["quick_eat", "grab_and_go", "meal"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["hot", "cold"],
+      "forms": ["salad", "bowl", "wrap"],
+      "role": ["base", "filler"],
+      "flavors": ["herby"],
+      "texture": ["leafy"],
+      "constraints": [],
       "is_pantry": false
     },
 
@@ -505,6 +703,12 @@
       "allowed_in": ["quick_eat", "grab_and_go", "meal"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["cold"],
+      "forms": ["dip", "wrap", "bowl", "snack"],
+      "role": ["binder", "base"],
+      "flavors": ["creamy", "nutty"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -518,6 +722,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["binder", "topping"],
+      "flavors": ["nutty"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -531,6 +741,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "fridge",
       "aliases": ["yogurt_dressing"],
+      "serve": ["cold"],
+      "forms": ["dressing"],
+      "role": ["binder", "topping"],
+      "flavors": ["creamy"],
+      "texture": ["creamy_texture"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -544,6 +760,12 @@
       "allowed_in": ["meal"],
       "storage": "pantry",
       "aliases": ["tomato_sauce"],
+      "serve": ["hot"],
+      "forms": ["sauce"],
+      "role": ["binder", "topping"],
+      "flavors": ["tomatoey"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -557,6 +779,12 @@
       "allowed_in": ["quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["topping"],
+      "role": ["topping"],
+      "flavors": ["nutty"],
+      "texture": ["crunchy"],
+      "constraints": [],
       "is_pantry": false
     },
     {
@@ -570,6 +798,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["umami"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -583,6 +817,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "fridge",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["herby"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -596,6 +836,12 @@
       "allowed_in": ["grab_and_go", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["topping"],
+      "role": ["topping"],
+      "flavors": ["sweet"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -609,6 +855,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["sweet", "umami"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
     {
@@ -622,6 +874,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "fridge",
       "aliases": ["salsa"],
+      "serve": ["cold"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["spicy", "acidic"],
+      "texture": ["soft"],
+      "constraints": ["no_heat"],
       "is_pantry": false
     },
 
@@ -636,6 +894,12 @@
       "allowed_in": ["meal", "quick_eat"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": true
     },
     {
@@ -649,6 +913,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["rice_vinegar", "apple_cider_vinegar"],
+      "serve": ["room"],
+      "forms": ["sauce"],
+      "role": ["topping", "binder"],
+      "flavors": ["acidic"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": true
     },
     {
@@ -662,6 +932,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["sea_salt"],
+      "serve": ["room"],
+      "forms": ["topping"],
+      "role": ["topping"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": true
     },
     {
@@ -675,6 +951,12 @@
       "allowed_in": ["meal", "quick_eat", "grab_and_go"],
       "storage": "pantry",
       "aliases": ["pepper"],
+      "serve": ["room"],
+      "forms": ["topping"],
+      "role": ["topping"],
+      "flavors": ["spicy"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": true
     },
     {
@@ -688,6 +970,12 @@
       "allowed_in": ["meal"],
       "storage": "pantry",
       "aliases": [],
+      "serve": ["hot"],
+      "forms": ["soup"],
+      "role": ["base"],
+      "flavors": ["neutral"],
+      "texture": ["soft"],
+      "constraints": [],
       "is_pantry": true
     }
   ]
