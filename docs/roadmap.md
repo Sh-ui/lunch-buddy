@@ -20,9 +20,12 @@ Layered plan optimized for Mac-first development, cross-platform portability, an
  - [x] Mobile-first SSR templates; Admin enabled for power editing
  - [x] Basic navigation and empty states
  - [x] CRUD UI for meals; heart/snooze/archive controls
+ - [x] Pantry JSON schema and viewer (spreadsheet-like table with filters)
+ - [x] Comprehensive pantry tagging (serve/forms/role/flavors/texture/constraints)
 
 ### Phase 3 — Plan Generation & History
- - [ ] Generate weekly plan (per-day × categories)
+ - [ ] Tag-driven generator that composes recipes from weekly pool
+ - [ ] Ensure outputs match patterns in `docs/example-weeks.md`
  - [ ] History views and mark liked/disliked
  - [ ] Re-generate flow with safeguards
 
