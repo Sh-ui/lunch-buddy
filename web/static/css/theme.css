@@ -1,0 +1,33 @@
+:root {
+  --brand: #f48c06; /* soft orange */
+  --brand-dark: #e85d04;
+  --bg: #fffaf3;
+  --text: #3b3b3b;
+  --card-bg: #ffffff;
+  --elev: 0 8px 24px rgba(0,0,0,0.08);
+  --radius: 1rem; /* rounded */
+}
+
+.bg-app {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+.bg-brand {
+  background-color: var(--brand) !important;
+}
+
+.card-elev {
+  background: var(--card-bg);
+  box-shadow: var(--elev);
+  border: none;
+}
+
+.rounded-4 {
+  border-radius: var(--radius) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+

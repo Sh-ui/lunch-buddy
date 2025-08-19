@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}Pantry — Lunch Buddy{% endblock %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h4 mb-0">Pantry</h1>
+    <div class="text-muted small">{{ item_count }} items • {{ pantry_count }} pantry staples</div>
+  </div>
+
+  {% if not ingredients %}
+    <div class="alert alert-warning rounded-4">No pantry data found or failed to parse. Ensure <code>var/pantry.json</code> exists.</div>
+  {% endif %}
+
+  <div class="card card-elev rounded-4">
+    <div class="card-body">
+      <div class="row g-2 align-items-end mb-3">
+        <div class="col-md-3">
+          <label class="form-label">Filter by type</label>
+          <select id="filter-type" class="form-select rounded-4">
+            <option value="">All</option>
+            {% for t in enums.type %}
+              <option value="{{ t }}">{{ t }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Filter by tag</label>
+          <select id="filter-tag" class="form-select rounded-4">
+            <option value="">All</option>
+            {% for t in enums.tags %}
+              <option value="{{ t }}">{{ t }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Search name</label>
+          <input id="filter-search" class="form-control rounded-4" placeholder="Search..." />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Show</label>
+          <select id="filter-pantry" class="form-select rounded-4">
+            <option value="all">All</option>
+            <option value="pantry">Pantry only</option>
+            <option value="nonpantry">Non‑pantry</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-sm align-middle table-hover" id="pantry-table">
+          <thead>
+            <tr>
+              {% for col in columns %}
+                <th class="text-nowrap">{{ col }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  {{ ingredients|json_script:"ingredients-data" }}
+  {{ columns|json_script:"columns-data" }}
+  <script>
+    (function() {
+      const ingredients = JSON.parse(document.getElementById('ingredients-data').textContent);
+      const columns = JSON.parse(document.getElementById('columns-data').textContent);
+
+      const $tbody = document.querySelector('#pantry-table tbody');
+      const $type = document.querySelector('#filter-type');
+      const $tag = document.querySelector('#filter-tag');
+      const $search = document.querySelector('#filter-search');
+      const $pantry = document.querySelector('#filter-pantry');
+
+      function normalize(value) {
+        if (Array.isArray(value)) return value.join(', ');
+        if (typeof value === 'boolean') return value ? 'true' : 'false';
+        return value ?? '';
+      }
+
+      function passesFilters(item) {
+        const t = $type.value;
+        const g = $tag.value;
+        const q = $search.value.trim().toLowerCase();
+        const p = $pantry.value;
+
+        if (t && item.type !== t) return false;
+        if (g && !(item.tags || []).includes(g)) return false;
+        if (p === 'pantry' && !item.is_pantry) return false;
+        if (p === 'nonpantry' && item.is_pantry) return false;
+        if (q && !(item.name || '').toLowerCase().includes(q) && !(item.key || '').toLowerCase().includes(q)) return false;
+        return true;
+      }
+
+      function render() {
+        $tbody.innerHTML = '';
+        const rows = ingredients.filter(passesFilters);
+        for (const item of rows) {
+          const tr = document.createElement('tr');
+          for (const col of columns) {
+            const td = document.createElement('td');
+            td.className = 'text-nowrap';
+            td.textContent = normalize(item[col]);
+            tr.appendChild(td);
+          }
+          $tbody.appendChild(tr);
+        }
+      }
+
+      [$type, $tag, $search, $pantry].forEach(el => el.addEventListener('input', render));
+      render();
+    })();
+  </script>
+{% endblock %}
+
+

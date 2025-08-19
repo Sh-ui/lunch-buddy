@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Week of {{ plan.week_start }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2 class="m-0">Week of {{ plan.week_start }}</h2>
+  <div class="d-flex gap-2">
+    <form method="post" action="{% url 'plan_like' plan.week_start %}">{% csrf_token %}<button class="btn btn-success btn-sm rounded-4" type="submit">Like</button></form>
+    <form method="post" action="{% url 'plan_dislike' plan.week_start %}">{% csrf_token %}<button class="btn btn-danger btn-sm rounded-4" type="submit">Dislike</button></form>
+    <a class="btn btn-outline-secondary btn-sm rounded-4" href="{% url 'plan_regenerate' plan.week_start %}">Re-generate</a>
+  </div>
+  
+</div>
+
+<div class="row">
+  {% for day in 'Mon,Tue,Wed,Thu,Fri,Sat,Sun'.split(',') %}
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="card card-elev rounded-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ day }}</h5>
+          <ul class="list-unstyled m-0">
+            {% for e in entries %}
+              {% if e.day == day %}
+                <li class="d-flex justify-content-between"><span>{{ e.category.name }}</span> <strong>{{ e.meal.name }}</strong></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+

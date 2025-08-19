@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Lunch Buddy — Home{% endblock %}
+{% block content %}
+  <div class="text-center">
+    <h1 class="display-6 mb-3">Welcome to Lunch Buddy</h1>
+    <p class="lead">Scaffold ready. Pantry, Planning, and Printing apps will appear here.</p>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-3">
+        <div class="card card-elev h-100 rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">Pantry</h5>
+            <p class="card-text">Explore the ingredient pantry with tags and properties.</p>
+            <a href="/pantry/" class="btn btn-primary rounded-4">Open Pantry</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card card-elev h-100 rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">Planning</h5>
+            <p class="card-text">Generate weekly plans and review history.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card card-elev h-100 rounded-4">
+          <div class="card-body">
+            <h5 class="card-title">Printing</h5>
+            <p class="card-text">Preview PDFs in dev. Printing adapters later.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
