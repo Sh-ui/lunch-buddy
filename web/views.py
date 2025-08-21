@@ -3,6 +3,7 @@ from pathlib import Path
 
 from django.conf import settings
 from django.shortcuts import render
+from planning.compose import load_pantry, generate_sample_week
 
 
 def home(request):
@@ -49,6 +50,7 @@ def pantry(request):
         'enums': enums,
         'pantry_count': len([i for i in ingredients if i.get('is_pantry')]),
         'item_count': len(ingredients),
+        'sample': generate_sample_week(load_pantry(data_path_candidates[0] if data_path_candidates[0].exists() else data_path_candidates[1]), seed=42),
     }
     return render(request, 'pantry.html', context)
 

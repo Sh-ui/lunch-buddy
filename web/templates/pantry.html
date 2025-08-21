@@ -12,6 +12,28 @@
 
   <div class="card card-elev rounded-4">
     <div class="card-body">
+      <h2 class="h6 text-uppercase text-muted mb-3">Preview (sample composition)</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mb-2 fw-semibold">Meal (Quick‑Cook)</div>
+          <ul class="small mb-3">
+            {% for s in sample.meal %}<li>{{ s }}</li>{% empty %}<li class="text-muted">No sample</li>{% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2 fw-semibold">Quick eat</div>
+          <ul class="small mb-3">
+            {% for s in sample.quick_eat %}<li>{{ s }}</li>{% empty %}<li class="text-muted">No sample</li>{% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2 fw-semibold">Grab and go</div>
+          <ul class="small mb-3">
+            {% for s in sample.grab_and_go %}<li>{{ s }}</li>{% empty %}<li class="text-muted">No sample</li>{% endfor %}
+          </ul>
+        </div>
+      </div>
+      <hr/>
       <div class="row g-2 align-items-end mb-3">
         <div class="col-md-3">
           <label class="form-label">Filter by type</label>

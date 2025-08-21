@@ -16,16 +16,17 @@ This document defines how Lunch Buddy composes weekly outputs from a tagged pant
 
 ### Composition model (per category)
 - Meal (Quick‑Cook)
-  - Required: 1 main protein OR legume base; 1 leafy or firm veg; base (optional) from whole_grain; 1 flavor (sauce/dressing/dip)
-  - Serve: hot is preferred; cold allowed if methods/serve support
-  - Valid forms: bowl
+  - Required: 1 main protein OR legume base; 1 leafy or firm veg; optional whole‑grain base; at least one of: flavor sauce/dressing/dip OR healthy‑fat/topping/acidic element.
+  - Serve: hot preferred; cold allowed if item `serve` permits (e.g., chilled bowls).
+  - Valid forms: bowl, wrap/tortilla, soup.
 - Quick eat (Prepped & Ready)
-  - Required: base (wrap/pita/salad/bowl) + binder (dressing/dip/yogurt/tahini/peanut_butter) when needed + veg; protein optional if binder is protein‑rich
-  - Serve: cold/room
-  - Valid forms: salad, wrap, pita, bowl
+  - Required: base (wrap/pita/salad/bowl) + veg; if any item has `needs_binder`, include a binder (dressing/dip/yogurt/tahini/peanut_butter). Protein optional if binder is protein‑rich.
+  - Serve: cold/room.
+  - Valid forms: salad, wrap, pita, bowl (cold).
 - Grab and go
-  - Required: snackable combo of 1–2 items (e.g., fruit + spread, veg + dip, cheese + crackers)
-  - Serve: room/cold, no cook; forms: snack, toast, wrap
+  - Required: snackable combo of 1–3 items (e.g., fruit + spread, veg + dip, cheese + crackers).
+  - Serve: room/cold, no cook.
+  - Valid forms: snack, toast, wrap.
 
 ### Compatibility rules (hard constraints)
 1. Use only items from the week pool plus pantry staples (`is_pantry: true`).
